@@ -1,0 +1,16 @@
+Jour 1 - 05/05
+
+Le but est de créer un widget pour le site web du lias et de récupérer les données d'un post/page instagram grâce au webscrapping
+
+Le site fonctionne grâce à jekyll qui est un générateur de site web statique, cela veut dire qu'on ne conserve rien,
+aucune données est conservée sur le site web. La synchronisation du site web s'effectue grâce à jenkins lorsqu'on effectue
+un push sur git le site se met à jour, il se met aussi à jour automatiquement toute les heures.
+
+Premier pas :
+Installation des premiers logiciels et setup de l'ordinateur.
+Premier test et premiere problématique
+
+En voulant tester un premier template, j'ai regardé les images instagram que l'on peut récupérer par une URL.
+Le problème cette url est généré par instagram sur un cdn (CDN = Content Delivery Network), c'est une url temporaire,
+ce qui pause une première problématique dans notre cas, car on ne souhaite pas conserver de donner donc d'images sur un serveur.
+

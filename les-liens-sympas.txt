@@ -1,0 +1,7 @@
+Exemple d'intégration jekyll
+https://it-journey.dev/notes/jekyllm-integration/jekyllm-integration/
+Problèmes images instagram
+https://www.reddit.com/r/privacy/comments/k15heu/is_instagrams_cdn_also_tracking_you/?tl=fr
+https://www.quora.com/What-CDN-is-used-by-Instagram
+Fonctionnement instagram
+https://medium.com/@sonal.dhanetwal.rai/instagram-system-design-a7bd2aa820c

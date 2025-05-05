@@ -14,3 +14,6 @@ En voulant tester un premier template, j'ai regardé les images instagram que l'
 Le problème cette url est généré par instagram sur un cdn (CDN = Content Delivery Network), c'est une url temporaire,
 ce qui pause une première problématique dans notre cas, car on ne souhaite pas conserver de donner donc d'images sur un serveur.
 
+Les questions :
+
+Problèmatiques sur linkedin -> les republications

@@ -10,4 +10,6 @@ body{
     width: 400px;
     background-color: white;
     border: 1px solid #F56A6A;
+    border-radius: 10px;
+    position: relative;
 }

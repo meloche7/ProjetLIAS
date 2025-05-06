@@ -17,3 +17,9 @@ ce qui pause une première problématique dans notre cas, car on ne souhaite pas
 Les questions :
 
 Problèmatiques sur linkedin -> les republications
+
+Jour 2 - 06/05
+
+Premier test de widget sur une page en html, le but est de créer plusieurs templates de widgets et de voir lesqulles correspond à nos attentes.
+
+Deuxième mission donné : établir un fichier avec toutes les informations que l'on peut obtenir d'un post instagram ou linkedin

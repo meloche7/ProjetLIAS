@@ -9,7 +9,22 @@ body{
     height: auto;
     width: 400px;
     background-color: white;
-    border: 1px solid #F56A6A;
+    border: 1px solid #dbdbdb;
     border-radius: 10px;
     position: relative;
+}
+.post:hover {
+    border: 2px solid #F56A6A;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+.profil-pic img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
 }

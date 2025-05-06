@@ -8,8 +8,52 @@
 </head>
 <body>
     <div class="post">
+    <div class="post-header">
+        <div class="profil-pic">
+            <img src="../_sources/profillias.png" alt="Utilisateur"/>
+        </div>
+        <div class="username">lias_labo</div>
+        <div class="post-date" >
+            <script>
+                const startDate = new Date("2025-05-26T00:12:56");
 
+                function updateElapsedTime() {
+                    const now = new Date();
+                    const diff = now - startDate;
 
+                    const seconds = Math.floor(diff / 1000) % 60;
+                    const minutes = Math.floor(diff / (1000 * 60)) % 60;
+                    const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+                    document.getElementById("elapsed-time").textContent =
+                        `${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
+                }
+
+                updateElapsedTime(); // appel initial
+                setInterval(updateElapsedTime, 1000); // mise à jour chaque seconde
+            </script>
+        </div>
+        <div class="post-network">
+            <a href="https://www.instagram.com/lias_laboratory/" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" />
+            </a>
+        </div>
     </div>
+    <div class="description">
+        <br>
+        {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
+        <br>
+        <br>
+        En savoir plus sur le site du LIAS
+        <br>
+        <br>
+        ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
+        <br>
+    </div>
+    <div class="post-ressources">
+        <img src="_sources/imagelias.jpg" alt="Post" class="post-image"/>
+    </div>
+</div>
 </body>
 </html>

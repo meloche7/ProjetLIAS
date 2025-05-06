@@ -10,3 +10,9 @@ https://medium.com/@sonal.dhanetwal.rai/instagram-system-design-a7bd2aa820c
 Les idées :
 https://flockler.com/fr/social-wall
 https://taggbox.com/linkedin-widget/
+https://www.serli.com
+https://elfsight.com/social-feed-widget/?utm_source=websites&utm_medium=clients&utm_content=social-feed&utm_term=www.serli.com&utm_campaign=free-widget
+https://curator.io/
+https://github.com/pavelk2/social-feed/?tab=readme-ov-file
+https://demo.mobiscroll.com/v4/javascript/cards/social#
+https://github.com/MediaComem/jekyll-brand-social-wall?tab=readme-ov-file

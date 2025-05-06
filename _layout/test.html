@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Test Layout</title>
-    </head>
-    <body>
-        <h1>Page du site</h1>
-        <div class="widget">
-            <h3>Nom du réseau</h3>>
-            <p>Description du produit</p>
-    </body>
-
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de contenu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .post {
+            width: 400px;
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+        }
+        .post-date {
+            text-align: left;
+            font-size: 0.85em;
+            color: #8e8e8e;
+            padding: 10px 0 0;
+        }
+        .post-image {
+            width: 100%;
+        }
+        .post-actions {
+            padding: 10px;
+        }
+        .post-actions img {
+            width: 24px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .likes {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .commentaire {
+            padding: 10px;
+        }
+        .commentaire span {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="post">
+    <div class="post-date">
+        12 janvier 2017
+    </div>
+    <div class="post-network">
+        <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=000000" alt="Instagram" />
+    </div>
+    <div class="post-ressources">
+        
+    </div>
+    <img src="/_sources/image1.jpg" alt="Post" class="post-image"/>
+    <div class="post-actions">
+        <img src="https://img.icons8.com/ios-glyphs/30/like--v1.png" alt="Like" />
+        <img src="https://img.icons8.com/ios-glyphs/30/comments.png" alt="Comment" />
+        <img src="https://img.icons8.com/ios-glyphs/30/sent.png" alt="Share" />
+    </div>
+    <div class="likes">123 j’aime</div>
+    <div class="commentaire">
+        <span>utilisateur</span> Ceci est une légende inspirante sous un post magnifique 🌅
+    </div>
+</div>
+</body>
 </html>

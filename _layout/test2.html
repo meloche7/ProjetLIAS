@@ -21,19 +21,19 @@
                 function updateElapsedTime() {
                     const now = new Date();
                     const diffMs = now - startDate;
-                    const totalHours = Math.floor(diffMs / (1000 * 60 * 60)) % 24;
+                    const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
                     const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
                     const totalWeeks = Math.floor(totalDays / 7);
 
                     let displayText = "";
 
                     if (totalHours < 24) {
-                        displayText = `${totalHours} h${totalHours !== 1 ? "s" : ""}`;
+                        displayText = `${totalHours} h`;
                     }
                     else if (totalDays < 7) {
-                        displayText = `${totalDays} j${totalDays !== 1 ? "s" : ""}`;
+                        displayText = `${totalDays} j`;
                     } else {
-                        displayText = `${totalWeeks} sem${totalWeeks !== 1 ? "s" : ""}`;
+                        displayText = `${totalWeeks} sem`;
                     }
 
                     document.getElementById("elapsed-time").textContent = displayText;

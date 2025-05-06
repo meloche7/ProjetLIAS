@@ -17,44 +17,62 @@
             background-color: white;
             border: 1px solid #dbdbdb;
             border-radius: 5px;
+            position: relative;
         }
-        .post-date {
-            text-align: left;
-            font-size: 0.85em;
-            color: #8e8e8e;
-            padding: 10px 0 0;
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: relative;
         }
-        .profil-pic {
-            width: 40px;
-            height: 40px;
+        .profil-pic img {
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            margin-right: 10px;
+            border: 2px solid white;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
         .username {
             font-weight: bold;
+            margin-left: 10px;
+        }
+        .post-date {
+            font-size: 0.8em;
+            color: #8e8e8e;
+            margin-left: auto;
+        }
+        .post-network img {
+            width: 20px;
+            height: 20px;
             margin-left: 10px;
         }
         .post-image {
             width: 100%;
         }
         .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px;
         }
-        .post-actions img {
-            width: 24px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
+
         .likes {
+            display: flex;
+            align-items: center;
+            gap: 5px;
             font-weight: bold;
-            padding: 0 10px;
+        }
+
+        .likes img {
+            width: 20px;
+        }
+
+        .share img {
+            width: 20px;
+            cursor: pointer;
         }
         .commentaire {
             padding: 10px;
-        }
-        .commentaire span {
-            font-weight: bold;
-            margin-right: 5px;
         }
     </style>
 </head>
@@ -63,28 +81,35 @@
     <div class="post-header">
         <div class="profil-pic">
             <img src="../_sources/profil1.jpg" alt="Utilisateur" />
-        <div class="username">
-            Francis
         </div>
-        <div class="post-date">
-            12 janvier 2017
-        </div>
+        <div class="username">Francis</div>
+        <div class="post-date">12 janvier 2017</div>
         <div class="post-network">
-            <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=000000" alt="Instagram" />
+            <a href="https://www.instagram.com/ciaokombucha/" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" />
+            </a>
         </div>
-    </div>    
+    </div>
+
     <div class="post-ressources">
-        <img src="../_sources/image1.jpg" alt="Post" class="post-image"/>
+        <img src="../_sources/image1.jpg" alt="Post" class="post-image" />
     </div>
-    
+
     <div class="post-actions">
-        <img src="https://img.icons8.com/ios-glyphs/30/like--v1.png" alt="Like" />
-        <img src="https://img.icons8.com/ios-glyphs/30/comments.png" alt="Comment" />
-        <img src="https://img.icons8.com/ios-glyphs/30/sent.png" alt="Share" />
+        <div class="likes">
+            <a href="https://www.instagram.com/p/DJMLC6VsRbQ" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=64767&format=png&color=000000" alt="Like" />
+            </a>
+            124
+        </div>
+        <div class="share">
+            <a href="https://www.instagram.com/share/url" target="_blank">
+                <img src="https://img.icons8.com/ios-glyphs/30/sent.png" alt="Share" />
+            </a>
+        </div>
     </div>
-    <div class="likes">123 j’aime</div>
     <div class="commentaire">
-        Ceci est une légende inspirante sous un post magnifique 🌅
+        Ceci est une magnifique photo 🌅
     </div>
 </div>
 </body>

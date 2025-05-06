@@ -14,24 +14,32 @@
         </div>
         <div class="username">lias_labo</div>
         <div class="post-date" >
+            <p id="elapsed-time">Calcul en cours...</p>
             <script>
-                const startDate = new Date("2025-05-26T00:12:56");
+                const startDate = new Date("2025-02-02T23:00:00");
 
                 function updateElapsedTime() {
                     const now = new Date();
-                    const diff = now - startDate;
+                    const diffMs = now - startDate;
+                    const totalHours = Math.floor(diffMs / (1000 * 60 * 60)) % 24;
+                    const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                    const totalWeeks = Math.floor(totalDays / 7);
 
-                    const seconds = Math.floor(diff / 1000) % 60;
-                    const minutes = Math.floor(diff / (1000 * 60)) % 60;
-                    const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    let displayText = "";
 
-                    document.getElementById("elapsed-time").textContent =
-                        `${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
+                    if (totalHours < 24) {
+                        displayText = `${totalHours} h${totalHours !== 1 ? "s" : ""}`;
+                    }
+                    else if (totalDays < 7) {
+                        displayText = `${totalDays} j${totalDays !== 1 ? "s" : ""}`;
+                    } else {
+                        displayText = `${totalWeeks} sem${totalWeeks !== 1 ? "s" : ""}`;
+                    }
+
+                    document.getElementById("elapsed-time").textContent = displayText;
                 }
 
-                updateElapsedTime(); // appel initial
-                setInterval(updateElapsedTime, 1000); // mise à jour chaque seconde
+                updateElapsedTime();
             </script>
         </div>
         <div class="post-network">

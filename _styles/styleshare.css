@@ -1,0 +1,56 @@
+.share-container {
+    position: relative;
+    display: inline-block;
+}
+
+.share-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.share-options a,
+.share-options button {
+    display: flex;
+    justify-content: space-between; /* espace entre texte et icône */
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    font: inherit;
+}
+
+.share-options {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 200px;
+}
+.share-options button{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.share-container.active .share-options {
+    display: block;
+}
+.share-options img{
+    width: 20px;
+    height: 20px;
+}

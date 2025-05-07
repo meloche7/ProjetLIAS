@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test 2 Feed réseaux sociaux</title>
   <link rel="stylesheet" href="../_styles/style3.css">
+  <link rel="stylesheet" href="../_styles/styleshare.css">
 </head>
 <body>
 <div class="post">
@@ -81,9 +82,49 @@
     </div>
     <div class="post-actions">
       <div class="share">
-        <a>
-          <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" />
-        </a>
+        <script>
+          const shareUrl = "https://monsite.com/page-exemple"; // ← change cette valeur selon la page
+        </script>
+        <div class="share-container" id="shareContainer">
+          <button class="share-button" id="shareToggleBtn"><img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" /></button>
+          <div class="share-options">
+            <button onclick="copyLink()">Copier le lien <span>  🔗</span></button>
+            <a href="#" id="facebookLink" target="_blank">Partager sur Facebook <span><img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook"></span></a>
+            <a href="#" id="twitterLink" target="_blank">Partager sur X <span><img src="https://img.icons8.com/?size=100&id=YfCbGWCWcuar&format=png&color=000000" alt="twitter"></span></a>
+            <a href="#" id="whatsappLink" target="_blank">Partager sur WhatsApp <span><img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="whatsapp"></span></a>
+            <a href="#" id="emailLink">Partager par Email <img src="https://img.icons8.com/?size=100&id=85500&format=png&color=000000" alt="mail"></a>
+          </div>
+        </div>
+
+        <script>
+          const shareContainer = document.getElementById("shareContainer");
+          const shareToggleBtn = document.getElementById("shareToggleBtn");
+
+          shareToggleBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            shareContainer.classList.toggle("active");
+          });
+
+          document.addEventListener("click", function(e) {
+            if (!shareContainer.contains(e.target)) {
+              shareContainer.classList.remove("active");
+            }
+          });
+
+          function copyLink() {
+            navigator.clipboard.writeText(shareUrl)
+                    .then(() => alert("Lien copié dans le presse-papiers !"))
+                    .catch(() => alert("Échec de la copie du lien."));
+          }
+
+          window.addEventListener("DOMContentLoaded", () => {
+            const encodedUrl = encodeURIComponent(shareUrl);
+            document.getElementById("facebookLink").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+            document.getElementById("twitterLink").href = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
+            document.getElementById("whatsappLink").href = `https://wa.me/?text=${encodedUrl}`;
+            document.getElementById("emailLink").href = `mailto:?subject=Regarde ça&body=${encodedUrl}`;
+          });
+        </script>
       </div>
     </div>
   </div>

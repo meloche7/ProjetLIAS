@@ -30,25 +30,32 @@ body {
     max-width: 100%;
     border-radius: 8px;
 }
-
-.post-network {
+.post-header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
-}
-
-.post-network img {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.username {
-    font-weight: bold;
-    color: #333;
+    gap: 10px; /* espace entre le nom et l’icône */
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.post-header .username {
+    font-weight: bold;
     font-size: 16px;
+    color: #333;
+}
+
+.post-header .post-network img {
+    width: 20px;
+    height: 20px;
+}
+
+.text{
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-align: justify;
+    color: #555;
 }
 
 .description {

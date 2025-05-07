@@ -1,7 +1,7 @@
 body{
     background-color: #E7EAFF;
     font-family: "Open Sans", sans-serif;
-    font-size: 13pt;
+    font-size: 10pt;
     font-weight: 400;
     line-height: 1.65;
 }
@@ -12,34 +12,63 @@ body{
     border: 1px solid #dbdbdb;
     border-radius: 10px;
     position: relative;
+    padding: 5px;
 }
 .post:hover {
-    border: 2px solid #F56A6A;
+    border: 1px solid #F56A6A;
 }
 
 .post-header {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* aligne les extrémités */
     padding: 5px;
-    position: relative;
 }
 .profil-pic img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    margin-right: 10px;
+}
+.post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 1px;
 }
 .username {
     font-weight: bold;
-    margin-left: 10px;
+    margin: 0px;
+    line-height: 0.8;
 }
 
 .post-date {
     font-size: 0.8em;
     color: #8e8e8e;
-    margin-right: 10px;
+    line-height: 0.8;
+    margin: 0px;
 }
 .post-network img {
+    width: 23px;
+    height: 23px;
+}
+.post-image{
+    width: 100%;
+}
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.likes {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+.likes img {
     width: 20px;
-    height: 20px;
-    margin-left: 10px;
 }

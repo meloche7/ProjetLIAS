@@ -12,35 +12,37 @@
         <div class="profil-pic">
             <img src="../_sources/profillias.png" alt="Utilisateur"/>
         </div>
-        <div class="username">lias_labo</div>
-        <div class="post-date" >
-            <p id="elapsed-time">Calcul en cours...</p>
-            <script>
-                const startDate = new Date("2025-02-02T23:00:00");
+        <div class="post-info">
+            <div class="username">lias_labo</div>
+            <div class="post-date" >
+                <p id="elapsed-time">Calcul en cours...</p>
+                <script>
+                    const startDate = new Date("2025-02-02T23:00:00");
 
-                function updateElapsedTime() {
-                    const now = new Date();
-                    const diffMs = now - startDate;
-                    const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
-                    const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-                    const totalWeeks = Math.floor(totalDays / 7);
+                    function updateElapsedTime() {
+                        const now = new Date();
+                        const diffMs = now - startDate;
+                        const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+                        const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                        const totalWeeks = Math.floor(totalDays / 7);
 
-                    let displayText = "";
+                        let displayText = "";
 
-                    if (totalHours < 24) {
-                        displayText = `${totalHours} h`;
+                        if (totalHours < 24) {
+                            displayText = `${totalHours} h`;
+                        }
+                        else if (totalDays < 7) {
+                            displayText = `${totalDays} j`;
+                        } else {
+                            displayText = `${totalWeeks} sem`;
+                        }
+
+                        document.getElementById("elapsed-time").textContent = displayText;
                     }
-                    else if (totalDays < 7) {
-                        displayText = `${totalDays} j`;
-                    } else {
-                        displayText = `${totalWeeks} sem`;
-                    }
 
-                    document.getElementById("elapsed-time").textContent = displayText;
-                }
-
-                updateElapsedTime();
-            </script>
+                    updateElapsedTime();
+                </script>
+            </div>
         </div>
         <div class="post-network">
             <a href="https://www.instagram.com/lias_laboratory/" target="_blank">

@@ -30,11 +30,13 @@ body {
 
 .post-header {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .profil-pic img {

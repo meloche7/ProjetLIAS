@@ -64,8 +64,9 @@ body {
     margin-bottom: 12px;
 }
 
-.description a {
-    color: #0077cc;
+.description a,
+.text a{
+    color: #F56A6A;
     text-decoration: none;
 }
 

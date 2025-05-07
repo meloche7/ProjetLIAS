@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test 2 Feed réseaux sociaux</title>
   <link rel="stylesheet" href="../_styles/style4.css">
+  <script>
+    function updateElapsedTime(elementId, startDateStr) {
+      const now = new Date();
+      const startDate = new Date(startDateStr);
+      const diffMs = now - startDate;
+      const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+      const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const totalWeeks = Math.floor(totalDays / 7);
+
+      let displayText = "";
+      if (totalHours < 24) {
+        displayText = `${totalHours} h`;
+      } else if (totalDays < 7) {
+        displayText = `${totalDays} j`;
+      } else {
+        displayText = `${totalWeeks} sem`;
+      }
+
+      const el = document.getElementById(elementId);
+      if (el) el.textContent = displayText;
+    }
+
+    // Attendre que tout le contenu HTML soit chargé
+    window.addEventListener("DOMContentLoaded", function () {
+      updateElapsedTime("elapsed-time-1", "2025-02-02T23:00:00");
+      updateElapsedTime("elapsed-time-2", "2024-02-23T20:15:45");
+    });
+  </script>
 </head>
 <body>
 
@@ -19,7 +47,7 @@
     </div>
     <div class="post-info">
       <div class="username">LIAS Laboratory</div>
-      <div class="userarobase">lias_laboratory</div>
+      <div class="userarobase">@lias_laboratory</div>
     </div>
   </div>
 
@@ -38,32 +66,7 @@
   <div class="post-footer">
 
     <div class="post-date" >
-      <p id="elapsed-time">Calcul en cours...</p>
-      <script>
-        const startDate = new Date("2025-02-02T23:00:00");
-
-        function updateElapsedTime() {
-          const now = new Date();
-          const diffMs = now - startDate;
-          const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
-          const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-          const totalWeeks = Math.floor(totalDays / 7);
-
-          let displayText = "";
-
-          if (totalHours < 24) {
-            displayText = `${totalHours} h`;
-          }
-          else if (totalDays < 7) {
-            displayText = `${totalDays} j`;
-          } else {
-            displayText = `${totalWeeks} sem`;
-          }
-
-          document.getElementById("elapsed-time").textContent = displayText;
-        }
-        updateElapsedTime();
-      </script>
+      <p id="elapsed-time-1">Calcul en cours...</p>
     </div>
 
     <div class="post-network">
@@ -77,35 +80,41 @@
 
 
 <div class="post">
+
+  <div class="post-ressources">
+    <div class="text">
+      {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a>  propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
+      <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
+      <br>
+      ➡️ Date limite de dépôt des candidatures : 28 avril 2025
+      <br>
+      <br>
+      ➡️ Date de prise de fonction : à partir de septembre 2025
+      <br>
+      Plus de détails sur la page Emploi
+      <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
+      <br>
+    </div>
+  </div>
+
   <div class="post-header">
     <div class="profil-pic">
       <img src="../_sources/profillias.png" alt="Utilisateur" />
     </div>
     <div class="post-info">
-      <div class="username">Lias</div>
-      <div class="post-date">7 juin 2023</div>
+      <div class="username">LIAS Laboratory</div>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <div class="post-date" >
+      <p id="elapsed-time-2">Calcul en cours...</p>
     </div>
     <div class="post-network">
       <a href="https://www.linkedin.com/company/lias-lab/" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="Linkedin" />
+        <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="Linkedin" />
       </a>
     </div>
-  </div>
-  <div class="post-ressources">
-    <br>
-    {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a>  propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
-    <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
-
-    <br>
-    <br>
-    ➡️ Date limite de dépôt des candidatures : 28 avril 2025
-    <br>
-    <br>
-    ➡️ Date de prise de fonction : à partir de septembre 2025
-    <br>
-    Plus de détails sur la page Emploi
-    <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
-    <br>
   </div>
 </div>
 </body>

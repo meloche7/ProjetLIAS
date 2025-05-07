@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 2 Feed réseaux sociaux</title>
+  <link rel="stylesheet" href="../_styles/style2.css">
+</head>
+<body>
+<div class="post">
+  <div class="post-header">
+    <div class="profil-pic">
+      <img src="../_sources/profillias.png" alt="Utilisateur"/>
+    </div>
+    <div class="post-info">
+      <div class="username">lias_labo</div>
+      <div class="post-date" >
+        <p id="elapsed-time">Calcul en cours...</p>
+        <script>
+          const startDate = new Date("2025-02-02T23:00:00");
+
+          function updateElapsedTime() {
+            const now = new Date();
+            const diffMs = now - startDate;
+            const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+            const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const totalWeeks = Math.floor(totalDays / 7);
+
+            let displayText = "";
+
+            if (totalHours < 24) {
+              displayText = `${totalHours} h`;
+            }
+            else if (totalDays < 7) {
+              displayText = `${totalDays} j`;
+            } else {
+              displayText = `${totalWeeks} sem`;
+            }
+
+            document.getElementById("elapsed-time").textContent = displayText;
+          }
+
+          updateElapsedTime();
+        </script>
+      </div>
+    </div>
+    <div class="post-network">
+      <a href="https://www.instagram.com/lias_laboratory/" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" />
+      </a>
+    </div>
+  </div>
+  <div class="description">
+    <br>
+    {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
+    <br>
+    <br>
+    En savoir plus sur le site du LIAS
+    <br>
+    <br>
+    ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
+    <br>
+  </div>
+  <div class="post-ressources">
+    <img src="../_sources/imagelias.jpg" alt="Post" class="post-image"/>
+  </div>
+</div>
+<div class="post">
+  <div class="post-header">
+    <div class="profil-pic">
+      <img src="../_sources/profillias.png" alt="Utilisateur" />
+    </div>
+    <div class="post-info">
+      <div class="username">Lias</div>
+      <div class="post-date">7 juin 2023</div>
+    </div>
+    <div class="post-network">
+      <a href="https://www.linkedin.com/company/lias-lab/" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="Linkedin" />
+      </a>
+    </div>
+  </div>
+  <div class="post-ressources">
+    <br>
+    {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a>  propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
+    <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
+
+    <br>
+    <br>
+    ➡️ Date limite de dépôt des candidatures : 28 avril 2025
+    <br>
+    <br>
+    ➡️ Date de prise de fonction : à partir de septembre 2025
+    <br>
+    Plus de détails sur la page Emploi
+    <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
+    <br>
+  </div>
+  <div class="post-actions">
+
+  </div>
+</div>
+</body>
+</html>

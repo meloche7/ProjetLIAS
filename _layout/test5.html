@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test 5 Feed réseaux sociaux grille</title>
     <link rel="stylesheet" href="../_styles/style5.css">
-    <link rel="stylesheet" href="../_styles/styleshare.css">
+    <link rel="stylesheet" href="../_styles/styleshare2.css">
 </head>
 <body>
 <div class="post">
@@ -21,27 +21,82 @@
             </div>
         </div>
     </div>
-    <div class="description">
-        <br>
-        {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
-        <br>
-        <br>
-        En savoir plus sur le site du LIAS
-        <br>
-        <br>
-        ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
-        <br>
-    </div>
-
-    <div class="post-footer">
-        <div class="post-date">
-            10/02/2025
+    <div class="inactive">
+        <div class="username">LIAS laboratory</div>
+        <div class="description">
+            <br>
+            {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
+            <br>
+            <br>
+            En savoir plus sur le site du LIAS
+            <br>
+            <br>
+            ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
+            <br>
         </div>
-        <div class="post-actions">
-            <div class="share">
-                <a>
-                    <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" />
-                </a>
+        <div class="post-footer">
+            <div class="post-date">
+                10/02/2025
+            </div>
+            <div class="post-actions">
+                <div class="share">
+                    <div class="share">
+                        <!-- URL à partager -->
+                        <script>
+                            const shareUrl = "https://monsite.com/page-exemple"; // ← modifie ici
+                        </script>
+
+                        <!-- Conteneur de partage -->
+                        <div class="share-container" id="shareContainer">
+                            <button id="shareToggleBtn">
+                                <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Partager" />
+                            </button>
+
+                            <div class="share-options">
+                                <button id="copyBtn" title="Copier le lien">
+                                    📋
+                                </button>
+
+                                <a id="facebookLink" target="_blank">
+                                    Partager sur Facebook
+                                    <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Script de gestion du partage -->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const shareContainer = document.getElementById("shareContainer");
+                                const toggleBtn = document.getElementById("shareToggleBtn");
+                                const copyBtn = document.getElementById("copyBtn");
+                                const facebookLink = document.getElementById("facebookLink");
+
+                                // Génère le lien Facebook
+                                facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+                                // Affiche/Masque les options
+                                toggleBtn.addEventListener("click", (e) => {
+                                    e.stopPropagation();
+                                    shareContainer.classList.toggle("active");
+                                });
+
+                                // Copie dans le presse-papier
+                                copyBtn.addEventListener("click", () => {
+                                    navigator.clipboard.writeText(shareUrl)
+                                        .then(() => alert("Lien copié dans le presse-papiers !"))
+                                        .catch(() => alert("Échec de la copie du lien."));
+                                });
+
+                                // Ferme le menu si clic à l’extérieur
+                                document.addEventListener("click", (e) => {
+                                    if (!shareContainer.contains(e.target)) {
+                                        shareContainer.classList.remove("active");
+                                    }
+                                });
+                            });
+                        </script>
+                </div>
             </div>
         </div>
     </div>
@@ -81,47 +136,59 @@
         </div>
         <div class="post-actions">
             <div class="share">
+                <!-- URL à partager -->
                 <script>
-                    const shareUrl = "https://monsite.com/page-exemple"; // ← change cette valeur selon la page
+                    const shareUrl = "https://monsite.com/page-exemple"; // ← modifie ici
                 </script>
+
+                <!-- Conteneur de partage -->
                 <div class="share-container" id="shareContainer">
-                    <button class="share-button" id="shareToggleBtn"><img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" /></button>
+                    <button id="shareToggleBtn">
+                        <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Partager" />
+                    </button>
+
                     <div class="share-options">
-                        <button onclick="copyLink()">Copier le lien <span>  🔗</span></button>
-                        <a href="#" id="facebookLink" target="_blank">Partager sur Facebook <span><img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook"></span></a>
-                        <a href="#" id="twitterLink" target="_blank">Partager sur X <span><img src="https://img.icons8.com/?size=100&id=YfCbGWCWcuar&format=png&color=000000" alt="twitter"></span></a>
-                        <a href="#" id="whatsappLink" target="_blank">Partager sur WhatsApp <span><img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="whatsapp"></span></a>
-                        <a href="#" id="emailLink">Partager par Email <img src="https://img.icons8.com/?size=100&id=85500&format=png&color=000000" alt="mail"></a>
+                        <button id="copyBtn" title="Copier le lien">
+                            📋
+                        </button>
+
+                        <a id="facebookLink" target="_blank">
+                            Partager sur Facebook
+                            <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
+                        </a>
                     </div>
                 </div>
 
+                <!-- Script de gestion du partage -->
                 <script>
-                    const shareContainer = document.getElementById("shareContainer");
-                    const shareToggleBtn = document.getElementById("shareToggleBtn");
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const shareContainer = document.getElementById("shareContainer");
+                        const toggleBtn = document.getElementById("shareToggleBtn");
+                        const copyBtn = document.getElementById("copyBtn");
+                        const facebookLink = document.getElementById("facebookLink");
 
-                    shareToggleBtn.addEventListener("click", function(e) {
-                        e.stopPropagation();
-                        shareContainer.classList.toggle("active");
-                    });
+                        // Génère le lien Facebook
+                        facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
-                    document.addEventListener("click", function(e) {
-                        if (!shareContainer.contains(e.target)) {
-                            shareContainer.classList.remove("active");
-                        }
-                    });
+                        // Affiche/Masque les options
+                        toggleBtn.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                            shareContainer.classList.toggle("active");
+                        });
 
-                    function copyLink() {
-                        navigator.clipboard.writeText(shareUrl)
-                            .then(() => alert("Lien copié dans le presse-papiers !"))
-                            .catch(() => alert("Échec de la copie du lien."));
-                    }
+                        // Copie dans le presse-papier
+                        copyBtn.addEventListener("click", () => {
+                            navigator.clipboard.writeText(shareUrl)
+                                .then(() => alert("Lien copié dans le presse-papiers !"))
+                                .catch(() => alert("Échec de la copie du lien."));
+                        });
 
-                    window.addEventListener("DOMContentLoaded", () => {
-                        const encodedUrl = encodeURIComponent(shareUrl);
-                        document.getElementById("facebookLink").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-                        document.getElementById("twitterLink").href = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
-                        document.getElementById("whatsappLink").href = `https://wa.me/?text=${encodedUrl}`;
-                        document.getElementById("emailLink").href = `mailto:?subject=Regarde ça&body=${encodedUrl}`;
+                        // Ferme le menu si clic à l’extérieur
+                        document.addEventListener("click", (e) => {
+                            if (!shareContainer.contains(e.target)) {
+                                shareContainer.classList.remove("active");
+                            }
+                        });
                     });
                 </script>
             </div>

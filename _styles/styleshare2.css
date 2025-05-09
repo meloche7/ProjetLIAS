@@ -1,0 +1,54 @@
+.share-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Bouton principal */
+#shareToggleBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Menu de partage (caché par défaut) */
+.share-options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Affiche le menu quand la classe "active" est ajoutée via JS */
+.share-container.active .share-options {
+    display: flex;
+}
+
+/* Boutons dans le menu */
+.share-options button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+/* Animation au survol */
+.share-options button:hover {
+    transform: scale(1.2);
+}
+
+/* Icônes SVG */
+.share-options svg,
+.share-options img {
+    width: 24px;
+    height: 24px;
+}

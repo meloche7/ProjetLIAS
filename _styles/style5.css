@@ -1,51 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
-    margin: 0;
-    padding: 20px;
-}
-
-.feed {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
+/* Conteneur principal */
 .post {
     position: relative;
-    overflow: hidden;
+    width: 300px; /* modifie cette largeur selon ton besoin */
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
-.post img {
+/* Partie toujours visible */
+.active {
+    position: relative;
+}
+
+/* Image forcée au format carré */
+.post-ressources {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1; /* impose un format carré */
+    overflow: hidden;
+}
+
+.post-ressources img.post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* image remplie sans déformation */
     display: block;
-    transition: transform 0.3s ease;
 }
 
-.post:hover img {
-    transform: scale(1.05);
-}
-
-.description {
+/* Logo du réseau social */
+.post-header {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    bottom: 8px;
+    right: 8px;
+}
+
+.post-network img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Description masquée par défaut */
+.inactive {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
     color: #fff;
-    padding: 15px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
 }
 
-.post:hover .description {
+/* Apparition au hover */
+.post:hover .inactive {
     opacity: 1;
+    pointer-events: auto;
+}
+/*Username*/
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
 }
 
-a.post-link {
-    text-decoration: none;
-    color: inherit;
+
+/* Description */
+.description {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.description a {
+    color: #F56A6A;
+    text-decoration: underline;
+}
+
+/* Footer */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    position: relative;
+    padding-top: 10px;
+}
+
+/* Icône de partage à gauche */
+.post-actions {
+    order: 1;
+}
+
+/* Date centrée en absolu */
+.post-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+}
+
+.post-actions img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Responsive si nécessaire */
+@media (max-width: 400px) {
+    .post {
+        width: 100%;
+    }
 }

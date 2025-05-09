@@ -1,21 +1,30 @@
+/* Container de partage */
 .share-container {
     position: relative;
     display: inline-block;
+    margin-left: auto; /* Force l'alignement à droite */
 }
 
-/* Bouton principal */
-#shareToggleBtn {
+/* Bouton de partage */
+.share-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-/* Menu de partage (caché par défaut) */
+.share-toggle-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Menu d'options */
 .share-options {
     position: absolute;
-    top: 110%;
-    left: 0;
+    bottom: 100%;
+    right: 0; /* Aligne à droite du conteneur */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -25,15 +34,25 @@
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1000;
+    margin-bottom: 5px; /* Espace entre le bouton et les options */
 }
 
-/* Affiche le menu quand la classe "active" est ajoutée via JS */
+/* Post footer modification pour supporter l'alignement */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+/* Reste du CSS inchangé */
 .share-container.active .share-options {
     display: flex;
 }
 
-/* Boutons dans le menu */
-.share-options button {
+.share-options button,
+.share-options a {
     background: none;
     border: none;
     cursor: pointer;
@@ -41,13 +60,11 @@
     transition: transform 0.2s;
 }
 
-/* Animation au survol */
-.share-options button:hover {
+.share-options button:hover,
+.share-options a:hover {
     transform: scale(1.2);
 }
 
-/* Icônes SVG */
-.share-options svg,
 .share-options img {
     width: 24px;
     height: 24px;

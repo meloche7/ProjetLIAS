@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test 5 Feed réseaux sociaux grille</title>
+    <title>Feed réseaux sociaux</title>
     <link rel="stylesheet" href="../_styles/style5.css">
     <link rel="stylesheet" href="../_styles/styleshare2.css">
 </head>
 <body>
-<div class="post">
+<!-- Premier post (Instagram) -->
+<div class="post" data-url="https://www.instagram.com/p/DFpK-0EA2yW/">
     <div class="active">
         <div class="post-ressources">
             <img src="../_sources/imagelias.jpg" alt="Post" class="post-image"/>
@@ -24,177 +25,124 @@
     <div class="inactive">
         <div class="username">LIAS laboratory</div>
         <div class="description">
-            <br>
             {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
-            <br>
-            <br>
+            <br><br>
             En savoir plus sur le site du LIAS
-            <br>
-            <br>
+            <br><br>
             ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
-            <br>
         </div>
         <div class="post-footer">
-            <div class="post-date">
-                10/02/2025
-            </div>
-            <div class="post-actions">
-                <div class="share">
-                    <div class="share">
-                        <!-- URL à partager -->
-                        <script>
-                            const shareUrl = "https://monsite.com/page-exemple"; // ← modifie ici
-                        </script>
-
-                        <!-- Conteneur de partage -->
-                        <div class="share-container" id="shareContainer">
-                            <button id="shareToggleBtn">
-                                <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Partager" />
-                            </button>
-
-                            <div class="share-options">
-                                <button id="copyBtn" title="Copier le lien">
-                                    📋
-                                </button>
-
-                                <a id="facebookLink" target="_blank">
-                                    Partager sur Facebook
-                                    <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Script de gestion du partage -->
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                const shareContainer = document.getElementById("shareContainer");
-                                const toggleBtn = document.getElementById("shareToggleBtn");
-                                const copyBtn = document.getElementById("copyBtn");
-                                const facebookLink = document.getElementById("facebookLink");
-
-                                // Génère le lien Facebook
-                                facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-
-                                // Affiche/Masque les options
-                                toggleBtn.addEventListener("click", (e) => {
-                                    e.stopPropagation();
-                                    shareContainer.classList.toggle("active");
-                                });
-
-                                // Copie dans le presse-papier
-                                copyBtn.addEventListener("click", () => {
-                                    navigator.clipboard.writeText(shareUrl)
-                                        .then(() => alert("Lien copié dans le presse-papiers !"))
-                                        .catch(() => alert("Échec de la copie du lien."));
-                                });
-
-                                // Ferme le menu si clic à l’extérieur
-                                document.addEventListener("click", (e) => {
-                                    if (!shareContainer.contains(e.target)) {
-                                        shareContainer.classList.remove("active");
-                                    }
-                                });
-                            });
-                        </script>
+            <div class="post-date">10/02/2025</div>
+            <div class="share-container">
+                <button class="share-toggle-btn">
+                    <img src="https://img.icons8.com/?size=100&id=FupVmEePjs1T&format=png&color=FFFFFF" alt="Partager" />
+                </button>
+                <div class="share-options">
+                    <button class="copy-btn" title="Copier le lien">📋</button>
+                    <a class="facebook-link" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="post">
 
-    <div class="post-header">
-        <div class="post-network">
-            <a href="https://www.linkedin.com/company/lias-lab/" target="_blank">
-                <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="Linkedin" />
-            </a>
+<!-- Deuxième post (LinkedIn) -->
+<div class="post" data-url="https://www.linkedin.com/company/lias-lab/">
+    <div class="active">
+        <div class="post-ressources">
+            <div class="text">
+                {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a> propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
+                <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
+                <br><br>
+                ➡️ Date limite de dépôt des candidatures : 28 avril 2025
+                <br><br>
+                ➡️ Date de prise de fonction : à partir de septembre 2025
+                <br>
+                Plus de détails sur la page Emploi
+                <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
+            </div>
         </div>
+        <div class="post-header">
+            <div class="post-network">
+                <a href="https://www.linkedin.com/company/lias-lab/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="Linkedin" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="inactive">
         <div class="username">LIAS Laboratory</div>
-    </div>
-
-    <div class="post-ressources">
-        <div class="text">
-            <br>
-            {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a>  propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
-            <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
-            <br>
-            <br>
-            ➡️ Date limite de dépôt des candidatures : 28 avril 2025
-            <br>
-            <br>
-            ➡️ Date de prise de fonction : à partir de septembre 2025
-            <br>
-            Plus de détails sur la page Emploi
-            <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
-            <br>
-        </div>
-    </div>
-
-    <div class="post-footer">
-        <div class="post-date">
-            10/02/2025
-        </div>
-        <div class="post-actions">
-            <div class="share">
-                <!-- URL à partager -->
-                <script>
-                    const shareUrl = "https://monsite.com/page-exemple"; // ← modifie ici
-                </script>
-
-                <!-- Conteneur de partage -->
-                <div class="share-container" id="shareContainer">
-                    <button id="shareToggleBtn">
-                        <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Partager" />
-                    </button>
-
-                    <div class="share-options">
-                        <button id="copyBtn" title="Copier le lien">
-                            📋
-                        </button>
-
-                        <a id="facebookLink" target="_blank">
-                            Partager sur Facebook
-                            <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
-                        </a>
-                    </div>
+        <div class="post-footer">
+            <div class="post-date">10/02/2025</div>
+            <div class="share-container">
+                <button class="share-toggle-btn">
+                    <img src="https://img.icons8.com/?size=100&id=FupVmEePjs1T&format=png&color=FFFFFF" alt="Partager" />
+                </button>
+                <div class="share-options">
+                    <button class="copy-btn" title="Copier le lien">📋</button>
+                    <a class="facebook-link" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook" />
+                    </a>
                 </div>
-
-                <!-- Script de gestion du partage -->
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                        const shareContainer = document.getElementById("shareContainer");
-                        const toggleBtn = document.getElementById("shareToggleBtn");
-                        const copyBtn = document.getElementById("copyBtn");
-                        const facebookLink = document.getElementById("facebookLink");
-
-                        // Génère le lien Facebook
-                        facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-
-                        // Affiche/Masque les options
-                        toggleBtn.addEventListener("click", (e) => {
-                            e.stopPropagation();
-                            shareContainer.classList.toggle("active");
-                        });
-
-                        // Copie dans le presse-papier
-                        copyBtn.addEventListener("click", () => {
-                            navigator.clipboard.writeText(shareUrl)
-                                .then(() => alert("Lien copié dans le presse-papiers !"))
-                                .catch(() => alert("Échec de la copie du lien."));
-                        });
-
-                        // Ferme le menu si clic à l’extérieur
-                        document.addEventListener("click", (e) => {
-                            if (!shareContainer.contains(e.target)) {
-                                shareContainer.classList.remove("active");
-                            }
-                        });
-                    });
-                </script>
             </div>
         </div>
     </div>
-
 </div>
+
+<script>
+    // Configuration des URLs de partage
+    const shareUrls = {
+        instagram: "https://www.lias-lab.fr/seminars/",
+        linkedin: "https://www.linkedin.com/company/lias-lab/jobs/"
+    };
+
+    // Initialisation du partage pour tous les conteneurs
+    document.addEventListener("DOMContentLoaded", () => {
+        const shareContainers = document.querySelectorAll('.share-container');
+
+        shareContainers.forEach((container, index) => {
+            const toggleBtn = container.querySelector('.share-toggle-btn');
+            const copyBtn = container.querySelector('.copy-btn');
+            const facebookLink = container.querySelector('.facebook-link');
+            const shareUrl = index === 0 ? shareUrls.instagram : shareUrls.linkedin;
+
+            // Configuration du lien Facebook
+            facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+            // Gestionnaire du bouton de partage
+            toggleBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                container.classList.toggle("active");
+            });
+
+            // Gestionnaire du bouton de copie
+            copyBtn.addEventListener("click", () => {
+                navigator.clipboard.writeText(shareUrl)
+                    .then(() => alert("Lien copié dans le presse-papiers !"))
+                    .catch(() => alert("Échec de la copie du lien."));
+            });
+        });
+
+        // Fermeture des menus au clic extérieur
+        document.addEventListener("click", (e) => {
+            shareContainers.forEach(container => {
+                if (!container.contains(e.target)) {
+                    container.classList.remove("active");
+                }
+            });
+        });
+        document.querySelectorAll(".post").forEach(post => {
+            post.addEventListener("click", (e) => {
+                // Évite de suivre les liens internes comme "Partager" ou "Copier"
+                if (!e.target.closest(".share-container") && !e.target.closest("a")) {
+                    const url = post.getAttribute("data-url");
+                    if (url) window.open(url, "_blank");
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

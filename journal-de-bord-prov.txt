@@ -10,7 +10,7 @@ Premier pas :
 Installation des premiers logiciels et setup de l'ordinateur.
 Premier test et premiere problématique
 
-En voulant tester un premier template, j'ai regardé les images instagram que l'on peut récupérer par une URL.
+En voulant tester un premier template, j'ai regardé les images instagram que l'on peut récusrer par une URL.
 Le problème cette url est généré par instagram sur un cdn (CDN = Content Delivery Network), c'est une url temporaire,
 ce qui pause une première problématique dans notre cas, car on ne souhaite pas conserver de donner donc d'images sur un serveur.
 
@@ -23,3 +23,12 @@ Jour 2 - 06/05
 Premier test de widget sur une page en html, le but est de créer plusieurs templates de widgets et de voir lesqulles correspond à nos attentes.
 
 Deuxième mission donné : établir un fichier avec toutes les informations que l'on peut obtenir d'un post instagram ou linkedin
+
+Jour 3 - 07/05
+
+Template en cours de création, 4 dèjà créer avec différentes dispositions et style
+
+Script en javacript
+
+A faire pour lundi 2, 3 autres templates, + voir autres scipt javascript
+Regarder pour faire du webscrapping en python

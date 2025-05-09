@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 5 Feed réseaux sociaux grille</title>
+    <link rel="stylesheet" href="../_styles/style5.css">
+    <link rel="stylesheet" href="../_styles/styleshare.css">
+</head>
+<body>
+<div class="post">
+    <div class="active">
+        <div class="post-ressources">
+            <img src="../_sources/imagelias.jpg" alt="Post" class="post-image"/>
+        </div>
+        <div class="post-header">
+            <div class="post-network">
+                <a href="https://www.instagram.com/lias_laboratory/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=DpOQ6G5p47f0&format=png&color=000000" alt="Instagram" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <br>
+        {Soutenance Thèse} Nour KARNIB <a href="https://www.instagram.com/lias_laboratory/" target="_blank">@lias_laboratory</a> soutiendra sa thèse de doctorat Informatique <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a> dont le titre est "Application of Optimization in Regional Distribution Network Reconfiguration" le 10/02/2025 à 13h30 en A102 <a href="https://www.instagram.com/explore/search/keyword/?q=%23ensma">#ensma</a>
+        <br>
+        <br>
+        En savoir plus sur le site du LIAS
+        <br>
+        <br>
+        ➡️ <a href="https://www.lias-lab.fr/seminars/" target="_blank">https://www.lias-lab.fr/seminars/</a>
+        <br>
+    </div>
+
+    <div class="post-footer">
+        <div class="post-date">
+            10/02/2025
+        </div>
+        <div class="post-actions">
+            <div class="share">
+                <a>
+                    <img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post">
+
+    <div class="post-header">
+        <div class="post-network">
+            <a href="https://www.linkedin.com/company/lias-lab/" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="Linkedin" />
+            </a>
+        </div>
+        <div class="username">LIAS Laboratory</div>
+    </div>
+
+    <div class="post-ressources">
+        <div class="text">
+            <br>
+            {Jobs} <a href="https://www.linkedin.com/company/lias-lab/">Laboratoire LIAS</a>  propose un sujet de thèse Cifre avec l'entreprise <a href="https://www.linkedin.com/company/airbus/" target="_blank">Airbus Aircraft</a> « Sérialisation en temps logique de multiples simulations avioniques temps réel »
+            <a href="https://www.linkedin.com/feed/hashtag/informatique" target="_blank">#informatique</a>
+            <br>
+            <br>
+            ➡️ Date limite de dépôt des candidatures : 28 avril 2025
+            <br>
+            <br>
+            ➡️ Date de prise de fonction : à partir de septembre 2025
+            <br>
+            Plus de détails sur la page Emploi
+            <a href="https://www.linkedin.com/company/lias-lab/jobs/" target="_blank">https://www.linkedin.com/company/lias-lab/jobs/</a>
+            <br>
+        </div>
+    </div>
+
+    <div class="post-footer">
+        <div class="post-date">
+            10/02/2025
+        </div>
+        <div class="post-actions">
+            <div class="share">
+                <script>
+                    const shareUrl = "https://monsite.com/page-exemple"; // ← change cette valeur selon la page
+                </script>
+                <div class="share-container" id="shareContainer">
+                    <button class="share-button" id="shareToggleBtn"><img src="https://img.icons8.com/?size=100&id=87729&format=png&color=000000" alt="Share" /></button>
+                    <div class="share-options">
+                        <button onclick="copyLink()">Copier le lien <span>  🔗</span></button>
+                        <a href="#" id="facebookLink" target="_blank">Partager sur Facebook <span><img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="facebook"></span></a>
+                        <a href="#" id="twitterLink" target="_blank">Partager sur X <span><img src="https://img.icons8.com/?size=100&id=YfCbGWCWcuar&format=png&color=000000" alt="twitter"></span></a>
+                        <a href="#" id="whatsappLink" target="_blank">Partager sur WhatsApp <span><img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="whatsapp"></span></a>
+                        <a href="#" id="emailLink">Partager par Email <img src="https://img.icons8.com/?size=100&id=85500&format=png&color=000000" alt="mail"></a>
+                    </div>
+                </div>
+
+                <script>
+                    const shareContainer = document.getElementById("shareContainer");
+                    const shareToggleBtn = document.getElementById("shareToggleBtn");
+
+                    shareToggleBtn.addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        shareContainer.classList.toggle("active");
+                    });
+
+                    document.addEventListener("click", function(e) {
+                        if (!shareContainer.contains(e.target)) {
+                            shareContainer.classList.remove("active");
+                        }
+                    });
+
+                    function copyLink() {
+                        navigator.clipboard.writeText(shareUrl)
+                            .then(() => alert("Lien copié dans le presse-papiers !"))
+                            .catch(() => alert("Échec de la copie du lien."));
+                    }
+
+                    window.addEventListener("DOMContentLoaded", () => {
+                        const encodedUrl = encodeURIComponent(shareUrl);
+                        document.getElementById("facebookLink").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                        document.getElementById("twitterLink").href = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
+                        document.getElementById("whatsappLink").href = `https://wa.me/?text=${encodedUrl}`;
+                        document.getElementById("emailLink").href = `mailto:?subject=Regarde ça&body=${encodedUrl}`;
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
